@@ -9,4 +9,4 @@ const desafio1 = () => {
 	return soma;
 }
 
-module.exports = desafio1;
+module.exports = { desafio1 };

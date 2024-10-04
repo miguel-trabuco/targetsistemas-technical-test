@@ -1,10 +1,20 @@
-const desafio1 = require('./desafios/desafio1.js')
-const desafio2 = require('./desafios/desafio2.js')
+const { desafio1 } = require('./desafios/desafio1.js');
+const { desafio2 } = require('./desafios/desafio2.js');
+const { desafio3 } = require('./desafios/desafio3.js');
+const { desafio4 } = require('./desafios/desafio4.js');
 
-const resDesafio1 = desafio1();
-const resDesafio2 = desafio2(89);
+(async () => {
+	const resDesafio1 = desafio1();
+	const resDesafio2 = desafio2(89);
+	const resDesafio3 = await desafio3();
+	const percentuaisDesafio4 = desafio4();
 
-console.log(`
+	let resDesafio4 = "";
+	for (let estado in percentuaisDesafio4) {
+  		resDesafio4 += `${estado}: ${percentuaisDesafio4[estado]}%\n`;
+	}
+
+	console.log(`
 ==== Resoluções dos Desafios da Target Sistemas ====
 
 1) Observe o trecho de código abaixo:
@@ -36,4 +46,35 @@ sequência.
 Numero de exemplo: 89
 
 Resposta: ${resDesafio2}
-`);
+
+=====================================================
+
+3) Dado um vetor que guarda o valor de faturamento
+diário de uma distribuidora, faça um programa, na
+linguagem que desejar, que calcule e retorne:
+• O menor valor de faturamento ocorrido em um dia do mês;
+• O maior valor de faturamento ocorrido em um dia do mês;
+• Número de dias no mês em que o valor de faturamento
+diário foi superior à média mensal.
+
+Respostas:
+• Menor valor de faturamento: R$${resDesafio3.menorFaturamento}
+• Maior valor de faturamento: R$${resDesafio3.maiorFaturamento}
+• Número de dias no mês com o valor de faturamento
+diário acima da média mensal: ${resDesafio3.diasAcimaDaMedia}
+
+=====================================================
+
+4) Dado o valor de faturamento mensal de uma distribuidora, detalhado por estado:
+• SP – R$67.836,43
+• RJ – R$36.678,66
+• MG – R$29.229,88
+• ES – R$27.165,48
+• Outros – R$19.849,53
+
+Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado teve dentro do valor total mensal da distribuidora.
+
+Resposta:
+${resDesafio4}
+	`);
+})();
