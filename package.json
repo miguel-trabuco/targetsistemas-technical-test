@@ -1,0 +1,12 @@
+{
+  "name": "targetsistemas-technical-test",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Resoluções para os desafios técnicos propostos pela Target Sistemas",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Miguel Trabuco",
+  "license": "MIT"
+}
