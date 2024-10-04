@@ -1,4 +1,4 @@
-export default function desafio1() {
+const desafio1 = () => {
 	let indice = 13, soma = 0, k = 0;
 
 	while (k < indice) {
@@ -8,3 +8,5 @@ export default function desafio1() {
 
 	return soma;
 }
+
+module.exports = desafio1;

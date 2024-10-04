@@ -1,8 +1,8 @@
-import desafio1 from "./desafios/desafio1.js";
-import defafio2 from "./desafios/deafio2.js";
+const desafio1 = require('./desafios/desafio1.js')
+const desafio2 = require('./desafios/desafio2.js')
 
 const resDesafio1 = desafio1();
-const resDesafio2 = defafio2(89);
+const resDesafio2 = desafio2(89);
 
 console.log(`
 ==== Resoluções dos Desafios da Target Sistemas ====

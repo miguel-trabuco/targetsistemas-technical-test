@@ -1,4 +1,4 @@
-export default function defafio2(num) {
+const desadio2 = (num) => {
 	let a = 0, b = 1;
 
 	if (num === a || num === b) {
@@ -18,3 +18,5 @@ export default function defafio2(num) {
 
 	return 'Não pertence a sequencia de Fibonacci';
 }
+
+module.exports = desadio2;
