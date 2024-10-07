@@ -2,12 +2,14 @@ const { desafio1 } = require('./desafios/desafio1.js');
 const { desafio2 } = require('./desafios/desafio2.js');
 const { desafio3 } = require('./desafios/desafio3.js');
 const { desafio4 } = require('./desafios/desafio4.js');
+const { desafio5 } = require('./desafios/desafio5.js');
 
 (async () => {
 	const resDesafio1 = desafio1();
 	const resDesafio2 = desafio2(89);
 	const resDesafio3 = await desafio3();
 	const percentuaisDesafio4 = desafio4();
+	const resDesafio5 = desafio5('Target Sistemas');
 
 	let resDesafio4 = "";
 	for (let estado in percentuaisDesafio4) {
@@ -65,16 +67,29 @@ diário acima da média mensal: ${resDesafio3.diasAcimaDaMedia}
 
 =====================================================
 
-4) Dado o valor de faturamento mensal de uma distribuidora, detalhado por estado:
+4) Dado o valor de faturamento mensal de uma 
+distribuidora, detalhado por estado:
 • SP – R$67.836,43
 • RJ – R$36.678,66
 • MG – R$29.229,88
 • ES – R$27.165,48
 • Outros – R$19.849,53
 
-Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado teve dentro do valor total mensal da distribuidora.
+Escreva um programa na linguagem que desejar onde
+calcule o percentual de representação que cada estado
+teve dentro do valor total mensal da distribuidora.
 
 Resposta:
 ${resDesafio4}
+
+=====================================================
+
+5) Escreva um programa que inverta os caracteres de
+um string.
+
+String escolhida: Target Sistemas
+
+Resposta:
+${resDesafio5}
 	`);
 })();
